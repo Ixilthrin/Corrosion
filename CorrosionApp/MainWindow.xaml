@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CorrosionApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="520" Width="650" Loaded="Window_Loaded">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition SharedSizeGroup="FirstColumn" Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" HorizontalAlignment="Center" 
+            MinWidth="80" Margin="3" Content="Tool I"  />
+            <Button Grid.Row="1" HorizontalAlignment="Center" 
+            MinWidth="80" Margin="3" Content="Tool II"  />
+        </Grid>
+
+        <Grid Grid.Column="1" Name="bounceCanvas" Background="Black" Height="500" Width="500">
+            
+        </Grid>
     </Grid>
 </Window>
